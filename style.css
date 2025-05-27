@@ -1,0 +1,322 @@
+/*--------body--------*/
+.body {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif; /* fuente Comic Sans */
+    background-color: #E8C5E5; /* fondo rosa */
+}
+
+/*----------header--------*/
+.header {
+    background-color: #E8C5E5; /* fondo rosa */
+    margin-bottom: 0;
+    padding: 1px; 
+    
+    
+}
+
+/*-------titulo----------*/
+
+.header_h1{
+    background-color: #F19ED2; /* fondo Light purple */
+    color: #03000a;/* texto Dark purple */
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif; /* fuente Comic Sans */
+    font-size: 20px;/* tamaño de fuente 20px */
+    font-weight: bold;/* negrita */
+    padding: 10px;/* padding 10px */
+    text-align: center;/* centrado */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.726); /* Sombra negra suave */
+    
+}
+
+.header_h1::first-letter {
+    font-size: 25px;
+    font-weight: bold;/* negrita */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.726); /* Sombra negra suave */
+}
+
+/*---------logo--------*/
+
+.header_logo {
+    width: 100px; /* Ajusta el ancho de la imagen */
+    height: 100px; /* Ajusta la altura de la imagen */
+    border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
+    object-fit: cover; /* Asegura que la imagen se recorte correctamente dentro del círculo */
+    margin: 20px auto; /* Centra la imagen horizontalmente y añade un margen superior */
+    display: block; /* Hace que la imagen sea un bloque para centrarla */ 
+    border: 2px solid #B5828C; /* Borde de 2px con color */  
+    
+    
+}
+
+/*---------nav----------*/
+.navbar {
+    background-color: #91DDCF !important; /* fondo azul */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* sombra */
+    margin: 0 !important; /* elimina margen */
+    padding: 0 !important; /* elimina padding */
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif !important; /* fuente Comic Sans */
+    
+}
+
+/*-------main--------*/
+.main {
+    background-color: #E8C5E5; /* fondo rosa */
+
+}
+
+/*---------titulo, (pagina productos)--------*/
+
+
+.main_productos_titulo {
+    height: 10px; /* Altura del título */
+    text-align: center; /* Centra el texto */
+    margin-top: 30px; /* Margen superior */
+    margin-bottom: 30px; /* Margen inferior */
+    color: #03000a; /* Dark purple */
+    
+    
+}
+
+.main_productos_titulo_h2 {
+    height: auto; /* Altura automática */
+    background-color: #E8C5E5 ;
+        opacity: 0;
+    transform: translateX(-480px);
+    animation: slideInLeft 3s ease-out forwards;
+    
+}
+
+@keyframes slideInLeft {/* Animación para deslizar titulo desde la izquierda */
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/*---------catalogo 2025 (pagina productos)--------*/
+
+
+
+.productos_catalogo {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.productos_catalogo_fila {
+    margin-bottom: 32px;
+}
+
+.productos_catalogo_fila_h3 {
+    text-align:center; /* Centra el texto */
+    margin-bottom: 20px;/* Margen inferior */
+    font-size: 30px; /* Tamaño de fuente */
+    color: #03000a; /* Dark purple */
+    background-color: #91DDCF; /* Light blue */
+}
+
+.grid-fotos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.grid-fotos figure {
+    margin: 10px; /* Espaciado externo */
+    padding: 10px; /* Espaciado interno */
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    font-size: 18px;/* Tamaño de fuente */
+    color: #03000a; /* Dark purple */
+    border-color: #B5828C;
+    border: 2px solid #B5828C; /* Borde de 2px con color */
+    
+}
+
+.grid-fotos img {
+    width: 100%;
+    height: auto; /* Altura automática */
+    object-fit: cover;
+    display: block;
+}
+
+.grid-fotos figcaption {
+    padding: 8px 4px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+
+/*---------portada--------*/
+
+.portada {
+    display: flex; /* Flexbox para alinear elementos */
+    width: 100%; /* Ancho de la portada */ 
+    max-width: 900px;
+    height: 430px; /* Alto de la portada */
+    background-color:#E8C5E5; /* Fondo rosa */;
+}
+.portada img {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    object-fit: cover; /* Ajusta la imagen al contenedor */
+    border-color: #91DDCF ;/* Color del borde */
+    border-width: 0.5px; /* Ancho del borde */
+    border-style: solid; /* Estilo del borde */
+}
+
+.portada img:hover {
+    transform: scale(1.05); /* Escala la imagen al pasar el mouse */
+    transition: transform 0.1s ease; /* Transición suave */
+}
+
+/**-----------portada movil--------*/
+.portada_mobile_img {
+    display: none; /* Oculta las imágenes por defecto */
+}
+
+/*---------opciones de pago y envio------*/
+
+.main_opcionesdepago_img {
+    width: 100%;
+    max-width: 180px;   /* Ajusta el tamaño máximo que prefieras */
+    height: 120px;      /* Altura fija para todas */
+    object-fit: cover;  /* Recorta la imagen para que no se deforme */
+    margin: 0 auto 10px auto;
+    display: block;
+    border-radius: 12px; /* Opcional: bordes redondeados */
+    
+}
+
+#carouselExample{
+    display: none; /* Oculta el carrusel por defecto */
+}
+
+/*---------quienessomos--------*/
+.main_quienessomos{
+    width: 100%;
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: 
+}
+    
+
+
+/*---------footer--------*/
+.footer {
+
+    background-color: #F19ED2; /* fondo Light purple */
+    padding: 30px; /* Padding */
+    
+  
+}
+.footer_flex {
+    display: flex;
+    justify-content: space-around; /* Espacio entre los elementos */
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.footer_contacto,
+.footer_redes {
+    flex: 1 1 0; /* Cada sección ocupa la misma fracción del espacio */
+    padding: 10px;
+
+}
+
+.footer_instagram_iglogo {
+    width: 100px; /* Ajusta el ancho de la imagen */
+    height: 100px; /* Ajusta la altura de la imagen */
+    border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
+    object-fit: cover; /* Asegura que la imagen se recorte correctamente dentro del círculo */
+    margin: 20px auto; /* Centra la imagen horizontalmente y añade un margen superior */
+    display:block; /* Hace que la imagen sea un bloque para centrarla */    
+    border: 2px solid #B5828C; /* Borde de 2px con color */
+}
+
+/*---------responsive--------*/
+
+/*---------Para pantallas grandes.-----*/
+
+@media (max-width: 1355px) {
+    .header {
+        max-width: 100%;
+        height: auto;
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+    .header_h1{
+        
+        width: 100vw;
+        box-sizing: border-box;
+        margin: 0;
+        left: 50%;
+        right: 50%;
+        
+    }
+
+    
+    .header_logo {
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        align-items: center; /* Centra la imagen verticalmente */
+    }
+
+    .portada {
+        display: none;
+    }
+    
+
+    .portada_mobile_img {
+        display: block; /* Muestra las imágenes en móviles */
+        width: 100%; /* Ancho completo */
+        height: auto; /* Altura automática */
+    }
+
+        
+    
+}
+ 
+/*---------Para tablets en vertical y móviles grandes.-----*/
+
+@media (max-width: 768px) {
+            .footer_flex {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px; /* Opcional: más espacio entre los divs */
+        }
+        /*pagina productos*/
+            .grid-fotos {
+        grid-template-columns: repeat(2, 1fr);
+}
+
+/*---------Para móviles pequeños.-----*/
+
+@media (max-width: 480px) {
+    .main_opcionesdepago {
+        display: none; /* Oculta el contenedor en móviles */
+    }
+    #carouselExample {
+        display: block; /* Muestra el carrusel en móviles */
+        width: 100%; /* Ancho completo */
+        height: auto; /* Altura automática */
+        background-color: whitesmoke; /* Fondo blanco */
+        
+    }
+    #carouselExample img {
+    width: 100%;
+    height: 220px;      /* Ajusta la altura según prefieras */
+    object-fit: cover;  /* Recorta la imagen para que no se deforme */
+    display: block;
+    }
+
+    /*pagina productos*/
+        .grid-fotos {
+        grid-template-columns: 1fr;
+    }
+    .grid-fotos img {
+        height: 250px;
+    }
+    
+
+}
