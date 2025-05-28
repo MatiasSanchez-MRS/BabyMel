@@ -82,6 +82,7 @@
         opacity: 0;
     transform: translateX(-480px);
     animation: slideInLeft 3s ease-out forwards;
+    color: #03000a; /* Dark purple */
     
 }
 
