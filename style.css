@@ -192,8 +192,48 @@
     
 }
 
+/*---------opciones de pago y envio------version mobile*/
+
 #carouselExample{
     display: none; /* Oculta el carrusel por defecto */
+}
+
+/* Cambia el color de las flechitas del carrusel a negro */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none; /* Quita el SVG por defecto */
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #000; /* Opcional: borde negro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+    content: '';
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    position: absolute;
+}
+
+.carousel-control-prev-icon::after {
+    left: 0.6rem;
+    top: 0.65rem;
+    transform: rotate(-135deg);
+}
+
+.carousel-control-next-icon::after {
+    left: 0.6rem;
+    top: 0.65rem;
+    transform: rotate(45deg);
 }
 
 /*---------quienessomos--------*/
