@@ -156,9 +156,12 @@
 .portada {
     display: flex; /* Flexbox para alinear elementos */
     width: 100%; /* Ancho de la portada */ 
-    max-width: 900px;
+    max-width: 1400px;
     height: 430px; /* Alto de la portada */
     background-color:#E8C5E5; /* Fondo rosa */;
+    margin: 0 auto; /* Centra la portada */
+   
+
 }
 .portada img {
     width: 100%; /* Ancho completo */
@@ -190,6 +193,17 @@
     display: block;
     border-radius: 12px; /* Opcional: bordes redondeados */
     
+    
+}
+
+.main_opcionesdepago_h5{
+    text-align: center; /* Centra el texto */
+}
+
+.main_opcionesdepago_p{
+    text-align: center; /* Centra el texto */
+    padding: auto; /* Padding automático */
+
 }
 
 /*---------opciones de pago y envio------version mobile*/
@@ -240,7 +254,8 @@
 .main_quienessomos{
     width: 100%;
     display: flex; /* Flexbox para alinear elementos */
-    justify-content: 
+    padding: 15px; 
+    
 }
     
 
