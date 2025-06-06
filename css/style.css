@@ -1,7 +1,17 @@
 /*--------body--------*/
-.body {
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
     font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif; /* fuente Comic Sans */
     background-color: #E8C5E5; /* fondo rosa */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
 }
 
 /*----------header--------*/
@@ -12,6 +22,8 @@
     
     
 }
+
+
 
 /*-------titulo----------*/
 
@@ -58,8 +70,14 @@
 }
 
 /*-------main--------*/
+
+main {
+    flex: 1 0 auto;
+    background-color: #E8C5E5; /* fondo rosa */
+}
 .main {
     background-color: #E8C5E5; /* fondo rosa */
+    flex: 1 0 auto;
 
 }
 
@@ -265,6 +283,7 @@
 
     background-color: #F19ED2; /* fondo Light purple */
     padding: 30px; /* Padding */
+    flex-shrink: 0; 
     
   
 }
