@@ -1,0 +1,83 @@
+.portada {
+        background-color: $color-principal; /* Color de fondo */
+        background-size: cover;
+        background-position: center;
+        display: flex; /* Flexbox para alinear elementos */
+        width: 100%; /* Ancho de la portada */ 
+        max-width: none; /* Ancho máximo de la portada */
+        height: 430px; /* Alto de la portada */
+        margin: 0 auto; /* Centra la portada */
+        img {
+            width: 100%; /* Ancho completo */
+            height: 100%; /* Alto completo */
+            object-fit: cover; /* Ajusta la imagen al contenedor */
+            border-color: $color-terciario; /* Color del borde */
+            border-width: 0.5px; /* Ancho del borde */
+            border-style: solid; /* Estilo del borde */
+            &:hover {
+                    transform: scale(1.05); /* Escala la imagen al pasar el mouse */
+                    transition: transform 0.1s ease; /* Transición suave */
+            }
+    }
+}
+
+.portada_mobile {
+    img {
+        display: none; /* Oculta las imágenes por defecto */
+    }
+}
+
+.main_opcionesdepago_img {
+    width: 100%;
+    max-width: 180px;   /* Ajusta el tamaño máximo que prefieras */
+    height: 120px;      /* Altura fija para todas */
+    object-fit: cover;  /* Recorta la imagen para que no se deforme */
+    margin: 0 auto 10px auto;
+    display: block;
+    border-radius: 12px; /* Opcional: bordes redondeados */
+    h5{
+    text-align: center; /* Centra el texto */
+    }
+    p{
+    text-align: center; /* Centra el texto */
+    padding: auto; /* Padding automático */
+    }    
+}
+
+#carouselExample{
+    display: none; /* Oculta el carrusel por defecto */
+}
+
+/*---------quienessomos--------*/
+.main_quienessomos{
+    width: 100%;
+    display: flex; /* Flexbox para alinear elementos */
+    padding: 15px; 
+    font-family: $fuente-principal;
+    
+}
+
+.footer{
+        background-color: $color-secundario; /* Color de fondo */
+        padding: 30px; /* Padding */
+        flex-shrink: 0; 
+        .footer_flex {
+        display: flex;
+        justify-content: space-around; /* Espacio entre los elementos */
+        align-items: flex-start;
+        gap: 8px;
+        }
+        .footer_contacto,.footer_redes {
+        flex: 1 1 0; /* Cada sección ocupa la misma fracción del espacio */
+        padding: 10px;
+        }
+        .footer_instagram_iglogo {
+        width: 100px; /* Ajusta el ancho de la imagen */
+        height: 100px; /* Ajusta la altura de la imagen */
+        border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
+        object-fit: cover; /* Asegura que la imagen se recorte correctamente dentro del círculo */
+        margin: 20px auto; /* Centra la imagen horizontalmente y añade un margen superior */
+        display:block; /* Hace que la imagen sea un bloque para centrarla */    
+        border: 2px solid $color-cuaternario; /* Borde de 2px con color */
+}
+}

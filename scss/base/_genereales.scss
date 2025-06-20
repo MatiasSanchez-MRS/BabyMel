@@ -1,0 +1,61 @@
+.header {
+    background-color: $color-principal; /* color de fondo */
+
+}
+
+.body {
+    background-color: $color-principal;
+}
+
+.header{
+    h1{
+        background-color: $color-secundario;
+        color: $color-quintario; /* color de texto */
+        font-family: $fuente-principal;
+        font-size: 40px;/* tamaño de fuente 40px */
+        font-weight: bold;/* negrita */
+        padding: 10px;/* padding 10px */
+        text-align: center;/* centrado */
+        text-shadow:  6px 6px 9px $color-cuaternario;
+        &::first-letter{
+                font-size: 47px;
+                font-weight: bold;/* negrita */
+                text-shadow: 6px 6px 9px $color-cuaternario;
+        }
+    }
+
+    .img-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-principal; /* color de fondo */
+        border-radius: 50%;
+        width: 120px;
+        height: 130px;
+        margin: 0 auto; /* Centra la imagen */
+
+        img{    
+        width: 100px; /* Ajusta el ancho de la imagen */
+        height: 100px; /* Ajusta la altura de la imagen */
+        border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
+        object-fit: cover; /* Asegura que la imagen se recorte correctamente dentro del círculo */
+
+        border: 2px solid #e3b8b2; /* Borde de 2px con color */
+       }
+    }
+}
+
+.navbar {
+        background-color: $color-terciario !important; /* fondo azul */
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* sombra */
+        margin: 0 !important; /* elimina margen */
+        padding: 0 !important; /* elimina padding */
+        font-family: $fuente-principal; /* fuente sans-serif */
+        
+}
+
+.main {
+        flex: 1 0 auto;
+        background-color: $color-principal;
+        flex: 1 0 auto;
+}

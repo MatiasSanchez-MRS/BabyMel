@@ -1,395 +1,336 @@
-/*--------body--------*/
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif; /* fuente Comic Sans */
-    background-color: #E8C5E5; /* fondo rosa */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-
-}
-
-/*----------header--------*/
+@charset "UTF-8";
+/* fuente sans-serif */
 .header {
-    background-color: #E8C5E5; /* fondo rosa */
-    margin-bottom: 0;
-    padding: 1px; 
-    
-    
+  background-color: #fffbd4; /* color de fondo */
 }
 
-
-
-/*-------titulo----------*/
-
-.header_h1{
-    background-color: #F19ED2; /* fondo Light purple */
-    color: #03000a;/* texto Dark purple */
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif; /* fuente Comic Sans */
-    font-size: 20px;/* tamaño de fuente 20px */
-    font-weight: bold;/* negrita */
-    padding: 10px;/* padding 10px */
-    text-align: center;/* centrado */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.726); /* Sombra negra suave */
-    
+.body {
+  background-color: #fffbd4;
 }
 
-.header_h1::first-letter {
-    font-size: 25px;
-    font-weight: bold;/* negrita */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.726); /* Sombra negra suave */
+.header h1 {
+  background-color: #f5ddbb;
+  color: #a18093; /* color de texto */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 40px; /* tamaño de fuente 40px */
+  font-weight: bold; /* negrita */
+  padding: 10px; /* padding 10px */
+  text-align: center; /* centrado */
+  text-shadow: 6px 6px 9px #e3b8b2;
+}
+.header h1::first-letter {
+  font-size: 47px;
+  font-weight: bold; /* negrita */
+  text-shadow: 6px 6px 9px #e3b8b2;
+}
+.header .img-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffbd4; /* color de fondo */
+  border-radius: 50%;
+  width: 120px;
+  height: 130px;
+  margin: 0 auto; /* Centra la imagen */
+}
+.header .img-logo img {
+  width: 100px; /* Ajusta el ancho de la imagen */
+  height: 100px; /* Ajusta la altura de la imagen */
+  border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
+  object-fit: cover; /* Asegura que la imagen se recorte correctamente dentro del círculo */
+  border: 2px solid #e3b8b2; /* Borde de 2px con color */
 }
 
-/*---------logo--------*/
-
-.header_logo {
-    width: 100px; /* Ajusta el ancho de la imagen */
-    height: 100px; /* Ajusta la altura de la imagen */
-    border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
-    object-fit: cover; /* Asegura que la imagen se recorte correctamente dentro del círculo */
-    margin: 20px auto; /* Centra la imagen horizontalmente y añade un margen superior */
-    display: block; /* Hace que la imagen sea un bloque para centrarla */ 
-    border: 2px solid #B5828C; /* Borde de 2px con color */  
-    
-    
-}
-
-/*---------nav----------*/
 .navbar {
-    background-color: #91DDCF !important; /* fondo azul */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* sombra */
-    margin: 0 !important; /* elimina margen */
-    padding: 0 !important; /* elimina padding */
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif !important; /* fuente Comic Sans */
-    
+  background-color: #ccded2 !important; /* fondo azul */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* sombra */
+  margin: 0 !important; /* elimina margen */
+  padding: 0 !important; /* elimina padding */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; /* fuente sans-serif */
 }
 
-/*-------main--------*/
-
-main {
-    flex: 1 0 auto;
-    background-color: #E8C5E5; /* fondo rosa */
-}
 .main {
-    background-color: #E8C5E5; /* fondo rosa */
-    flex: 1 0 auto;
-
+  flex: 1 0 auto;
+  background-color: #fffbd4;
+  flex: 1 0 auto;
 }
-
-/*---------titulo, (pagina productos)--------*/
-
-
-.main_productos_titulo {
-    height: 10px; /* Altura del título */
-    text-align: center; /* Centra el texto */
-    margin-top: 30px; /* Margen superior */
-    margin-bottom: 30px; /* Margen inferior */
-    color: #03000a; /* Dark purple */
-    
-    
-}
-
-.main_productos_titulo_h2 {
-    height: auto; /* Altura automática */
-    background-color: #E8C5E5 ;
-        opacity: 0;
-    transform: translateX(-480px);
-    animation: slideInLeft 3s ease-out forwards;
-    color: #03000a; /* Dark purple */
-    
-}
-
-@keyframes slideInLeft {/* Animación para deslizar titulo desde la izquierda */
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-
-/*---------catalogo 2025 (pagina productos)--------*/
-
-        .galeria-productos {
-            padding: 40px 0;
-            
-        }
-        .grid-fotos {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-        .producto-card {
-            border: 2px solid #F19ED2;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #fff;
-            transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
-            text-align: center;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .producto-card:hover {
-            box-shadow: 0 4px 24px rgba(241, 158, 210, 0.2);
-            border-color: #B5828C;
-            transform: translateY(-6px) scale(1.03);
-        }
-        .producto-card img {
-            width: 100%;
-            height: 210px;
-            object-fit: cover;
-        }
-        .producto-card figcaption {
-            padding: 12px 8px;
-            font-size: 1rem;
-            color: #6c3483;
-            background: #f8f8f8;
-        }
-
-    
-
-/*----------------fin pagina productos-----------------*/
-
-
-
-/*---------portada--------*/
 
 .portada {
-    display: flex; /* Flexbox para alinear elementos */
-    width: 100%; /* Ancho de la portada */ 
-    max-width: 1400px;
-    height: 430px; /* Alto de la portada */
-    background-color:#E8C5E5; /* Fondo rosa */;
-    margin: 0 auto; /* Centra la portada */
-   
-
+  background-color: #fffbd4; /* Color de fondo */
+  background-size: cover;
+  background-position: center;
+  display: flex; /* Flexbox para alinear elementos */
+  width: 100%; /* Ancho de la portada */
+  max-width: none; /* Ancho máximo de la portada */
+  height: 430px; /* Alto de la portada */
+  margin: 0 auto; /* Centra la portada */
 }
 .portada img {
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Alto completo */
-    object-fit: cover; /* Ajusta la imagen al contenedor */
-    border-color: #91DDCF ;/* Color del borde */
-    border-width: 0.5px; /* Ancho del borde */
-    border-style: solid; /* Estilo del borde */
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  object-fit: cover; /* Ajusta la imagen al contenedor */
+  border-color: #ccded2; /* Color del borde */
+  border-width: 0.5px; /* Ancho del borde */
+  border-style: solid; /* Estilo del borde */
 }
-
 .portada img:hover {
-    transform: scale(1.05); /* Escala la imagen al pasar el mouse */
-    transition: transform 0.1s ease; /* Transición suave */
+  transform: scale(1.05); /* Escala la imagen al pasar el mouse */
+  transition: transform 0.1s ease; /* Transición suave */
 }
 
-/**-----------portada movil--------*/
-.portada_mobile_img {
-    display: none; /* Oculta las imágenes por defecto */
+.portada_mobile img {
+  display: none; /* Oculta las imágenes por defecto */
 }
-
-/*---------opciones de pago y envio------*/
 
 .main_opcionesdepago_img {
-    width: 100%;
-    max-width: 180px;   /* Ajusta el tamaño máximo que prefieras */
-    height: 120px;      /* Altura fija para todas */
-    object-fit: cover;  /* Recorta la imagen para que no se deforme */
-    margin: 0 auto 10px auto;
-    display: block;
-    border-radius: 12px; /* Opcional: bordes redondeados */
-    
-    
+  width: 100%;
+  max-width: 180px; /* Ajusta el tamaño máximo que prefieras */
+  height: 120px; /* Altura fija para todas */
+  object-fit: cover; /* Recorta la imagen para que no se deforme */
+  margin: 0 auto 10px auto;
+  display: block;
+  border-radius: 12px; /* Opcional: bordes redondeados */
+}
+.main_opcionesdepago_img h5 {
+  text-align: center; /* Centra el texto */
+}
+.main_opcionesdepago_img p {
+  text-align: center; /* Centra el texto */
+  padding: auto; /* Padding automático */
 }
 
-.main_opcionesdepago_h5{
-    text-align: center; /* Centra el texto */
-}
-
-.main_opcionesdepago_p{
-    text-align: center; /* Centra el texto */
-    padding: auto; /* Padding automático */
-
-}
-
-/*---------opciones de pago y envio------version mobile*/
-
-#carouselExample{
-    display: none; /* Oculta el carrusel por defecto */
-}
-
-/* Cambia el color de las flechitas del carrusel a negro */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-image: none; /* Quita el SVG por defecto */
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: transparent;
-    border-radius: 50%;
-    border: 2px solid #000; /* Opcional: borde negro */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.carousel-control-prev-icon::after,
-.carousel-control-next-icon::after {
-    content: '';
-    display: block;
-    width: 1.2rem;
-    height: 1.2rem;
-    border-top: 3px solid #000;
-    border-right: 3px solid #000;
-    position: absolute;
-}
-
-.carousel-control-prev-icon::after {
-    left: 0.6rem;
-    top: 0.65rem;
-    transform: rotate(-135deg);
-}
-
-.carousel-control-next-icon::after {
-    left: 0.6rem;
-    top: 0.65rem;
-    transform: rotate(45deg);
+#carouselExample {
+  display: none; /* Oculta el carrusel por defecto */
 }
 
 /*---------quienessomos--------*/
-.main_quienessomos{
-    width: 100%;
-    display: flex; /* Flexbox para alinear elementos */
-    padding: 15px; 
-    
+.main_quienessomos {
+  width: 100%;
+  display: flex; /* Flexbox para alinear elementos */
+  padding: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-    
 
-
-/*---------footer--------*/
 .footer {
-
-    background-color: #F19ED2; /* fondo Light purple */
-    padding: 30px; /* Padding */
-    flex-shrink: 0; 
-    
-  
+  background-color: #f5ddbb; /* Color de fondo */
+  padding: 30px; /* Padding */
+  flex-shrink: 0;
 }
-.footer_flex {
-    display: flex;
-    justify-content: space-around; /* Espacio entre los elementos */
-    align-items: flex-start;
-    gap: 8px;
+.footer .footer_flex {
+  display: flex;
+  justify-content: space-around; /* Espacio entre los elementos */
+  align-items: flex-start;
+  gap: 8px;
 }
-
-.footer_contacto,
-.footer_redes {
-    flex: 1 1 0; /* Cada sección ocupa la misma fracción del espacio */
-    padding: 10px;
-
+.footer .footer_contacto, .footer .footer_redes {
+  flex: 1 1 0; /* Cada sección ocupa la misma fracción del espacio */
+  padding: 10px;
 }
-
-.footer_instagram_iglogo {
-    width: 100px; /* Ajusta el ancho de la imagen */
-    height: 100px; /* Ajusta la altura de la imagen */
-    border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
-    object-fit: cover; /* Asegura que la imagen se recorte correctamente dentro del círculo */
-    margin: 20px auto; /* Centra la imagen horizontalmente y añade un margen superior */
-    display:block; /* Hace que la imagen sea un bloque para centrarla */    
-    border: 2px solid #B5828C; /* Borde de 2px con color */
+.footer .footer_instagram_iglogo {
+  width: 100px; /* Ajusta el ancho de la imagen */
+  height: 100px; /* Ajusta la altura de la imagen */
+  border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
+  object-fit: cover; /* Asegura que la imagen se recorte correctamente dentro del círculo */
+  margin: 20px auto; /* Centra la imagen horizontalmente y añade un margen superior */
+  display: block; /* Hace que la imagen sea un bloque para centrarla */
+  border: 2px solid #e3b8b2; /* Borde de 2px con color */
 }
 
-/*---------responsive--------*/
-
-/*---------Para pantallas grandes.-----*/
-
-@media (max-width: 1355px) {
-    .header {
-        max-width: 100%;
-        height: auto;
-        text-align: center; /* Centra el texto en pantallas pequeñas */
-    }
-    .header_h1{
-        
-        width: 100vw;
-        box-sizing: border-box;
-        margin: 0;
-        left: 50%;
-        right: 50%;
-        
-    }
-
-    
-    .header_logo {
-        height: auto; /* Permite que la altura se ajuste automáticamente */
-        align-items: center; /* Centra la imagen verticalmente */
-    }
-
-    .portada {
-        display: none;
-    }
-    
-
-    .portada_mobile_img {
-        display: block; /* Muestra las imágenes en móviles */
-        width: 100%; /* Ancho completo */
-        height: auto; /* Altura automática */
-    }
-
-        
-    
+.catalogo-main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  background-color: #fffbd4;
 }
-   /*pagina productos*/
-            @media (max-width: 900px) {
-            .grid-fotos {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        @media (max-width: 600px) {
-            .grid-fotos {
-                grid-template-columns: 1fr;
-            }
-            .producto-card img {
-                height: 140px;
-            }
-        } 
 
+.catalogo-titulo {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 2.5rem;
+  color: #a18093;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-shadow: 6px 6px 9px #e3b8b2;
+  font-style: italic;
+  overflow: hidden;
+  animation: slideInOut 3s linear 1;
+}
 
-/*---------Para tablets en vertical y móviles grandes.-----*/
+@keyframes slideInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+.catalogo-ropa {
+  background: #fffbd4;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  min-height: 100vh;
+  padding: 30px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.catalogo-ropa .catalogo-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  flex: 0 1 70%;
+  max-width: 70%;
+  margin-right: 5%;
+  margin-left: 10%;
+}
+.catalogo-ropa .catalogo-aside {
+  flex: 0 1 30%;
+  max-width: 30%;
+  background: #fff;
+  border: 2px solid #ccded2;
+  border-radius: 12px;
+  padding: 24px 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 40px;
+  margin-left: 5%;
+  margin-right: 10%;
+}
+.catalogo-ropa .catalogo-aside h2 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #a18093;
+  text-shadow: 6px 6px 9px #e3b8b2;
+  font-weight: bold;
+}
+.catalogo-ropa .catalogo-aside p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+.catalogo-ropa .catalogo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+@media (max-width: 600px) {
+  .catalogo-ropa .catalogo-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.catalogo-ropa .catalogo-descripcion {
+  width: 280px;
+  height: 280px;
+  border: 2px solid #ccded2;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  margin-right: 0;
+}
+@media (max-width: 600px) {
+  .catalogo-ropa .catalogo-descripcion {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+.catalogo-ropa .catalogo-carousel {
+  width: 280px;
+  height: 280px;
+  border: 2px solid #ccded2;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-left: 0;
+}
+.catalogo-ropa .catalogo-carousel .carousel-control-prev-icon,
+.catalogo-ropa .catalogo-carousel .carousel-control-next-icon {
+  filter: invert(1) grayscale(1) brightness(0.2);
+}
+@media (max-width: 600px) {
+  .catalogo-ropa .catalogo-carousel {
+    margin-left: 0;
+  }
+}
+.catalogo-ropa .catalogo-carousel .carousel-inner,
+.catalogo-ropa .catalogo-carousel .carousel-item,
+.catalogo-ropa .catalogo-carousel img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.catalogo-ropa .catalogo-colores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.catalogo-ropa .color-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid #888;
+  cursor: pointer;
+  outline: none;
+  background: #eee;
+  transition: border 0.2s;
+}
+.catalogo-ropa .color-btn:hover {
+  border: 2px solid #e3b8b2;
+}
 
-@media (max-width: 768px) {
-            .footer_flex {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 16px; /* Opcional: más espacio entre los divs */
-        }
-        /*pagina productos*/
-            .grid-fotos {
-        grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-/*---------Para móviles pequeños.-----*/
-
-@media (max-width: 480px) {
-    .main_opcionesdepago {
-        display: none; /* Oculta el contenedor en móviles */
-    }
-    #carouselExample {
-        display: block; /* Muestra el carrusel en móviles */
-        width: 100%; /* Ancho completo */
-        height: auto; /* Altura automática */
-        background-color: whitesmoke; /* Fondo blanco */
-        
-    }
-    #carouselExample img {
+/*productos2-----------------------------------*/
+/*productos2-----------------------------------*/
+.catalogo-ropa {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+@media (max-width: 900px) {
+  .catalogo-ropa {
+    flex-direction: column;
+  }
+  .catalogo-ropa .catalogo-lista, .catalogo-ropa .catalogo-aside {
+    max-width: 100%;
     width: 100%;
-    height: 220px;      /* Ajusta la altura según prefieras */
-    object-fit: cover;  /* Recorta la imagen para que no se deforme */
-    display: block;
-    }
-
- 
-
-    
-
+  }
+  .catalogo-ropa .catalogo-lista {
+    flex: 1 1 100%;
+  }
+  .catalogo-ropa .catalogo-aside {
+    margin-top: 24px;
+    height: auto;
+    position: static;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */

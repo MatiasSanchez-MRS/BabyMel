@@ -1,0 +1,24 @@
+/*productos2-----------------------------------*/
+/*productos2-----------------------------------*/
+.catalogo-ropa{
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    .catalogo-lista, .catalogo-aside {
+      max-width: 100%;
+      width: 100%;
+    }
+    .catalogo-lista {
+      // Ocupa todo el ancho cuando el aside pasa abajo
+      flex: 1 1 100%;
+    }
+    .catalogo-aside {
+      margin-top: 24px;
+      height: auto;
+      position: static;
+    }
+  }
+}
