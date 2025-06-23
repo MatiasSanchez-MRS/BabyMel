@@ -1,14 +1,19 @@
 .header {
-    background-color: $color-principal; /* color de fondo */
-
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-principal; /* color de fondo */
 }
 
 .body {
     background-color: $color-principal;
+    margin: 0;
+    padding: 0;
+
 }
 
 .header{
     h1{
+        margin: 0%; /* elimina margen */
         background-color: $color-secundario;
         color: $color-quintario; /* color de texto */
         font-family: $fuente-principal;
@@ -18,7 +23,7 @@
         text-align: center;/* centrado */
         text-shadow:  6px 6px 9px $color-cuaternario;
         &::first-letter{
-                font-size: 47px;
+                font-size: 77px;
                 font-weight: bold;/* negrita */
                 text-shadow: 6px 6px 9px $color-cuaternario;
         }

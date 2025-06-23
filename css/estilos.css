@@ -1,3 +1,409 @@
+@charset "UTF-8";
+/* fuente sans-serif */
+.header {
+  flex-direction: column;
+  align-items: center;
+  background-color: #fffbd4; /* color de fondo */
+}
 
+.body {
+  background-color: #fffbd4;
+  margin: 0;
+  padding: 0;
+}
+
+.header h1 {
+  margin: 0%; /* elimina margen */
+  background-color: #f5ddbb;
+  color: #a18093; /* color de texto */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 40px; /* tamaño de fuente 40px */
+  font-weight: bold; /* negrita */
+  padding: 10px; /* padding 10px */
+  text-align: center; /* centrado */
+  text-shadow: 6px 6px 9px #e3b8b2;
+}
+.header h1::first-letter {
+  font-size: 77px;
+  font-weight: bold; /* negrita */
+  text-shadow: 6px 6px 9px #e3b8b2;
+}
+.header .img-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffbd4; /* color de fondo */
+  border-radius: 50%;
+  width: 120px;
+  height: 130px;
+  margin: 0 auto; /* Centra la imagen */
+}
+.header .img-logo img {
+  width: 100px; /* Ajusta el ancho de la imagen */
+  height: 100px; /* Ajusta la altura de la imagen */
+  border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
+  object-fit: cover; /* Asegura que la imagen se recorte correctamente dentro del círculo */
+  border: 2px solid #e3b8b2; /* Borde de 2px con color */
+}
+
+.navbar {
+  background-color: #ccded2 !important; /* fondo azul */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* sombra */
+  margin: 0 !important; /* elimina margen */
+  padding: 0 !important; /* elimina padding */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; /* fuente sans-serif */
+}
+
+.main {
+  flex: 1 0 auto;
+  background-color: #fffbd4;
+  flex: 1 0 auto;
+}
+
+/*index-----------------------------------*/
+@media (min-width: 900px) {
+  .header {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .header h1 {
+    font-size: 3rem;
+  }
+  .header .img-logo {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 1100px) {
+  .portada {
+    display: none !important;
+  }
+  .portada_mobile img {
+    display: block !important;
+    width: 100%;
+    height: auto;
+  }
+}
+/*productos2-----------------------------------*/
+.catalogo-ropa {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+@media (max-width: 900px) {
+  .catalogo-ropa {
+    flex-direction: column;
+  }
+  .catalogo-ropa .catalogo-lista, .catalogo-ropa .catalogo-aside {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 3px !important;
+    padding: 3px !important;
+  }
+  .catalogo-ropa .catalogo-lista {
+    flex: 1 1 100%;
+  }
+  .catalogo-ropa .catalogo-aside {
+    margin-top: 24px;
+    height: auto !important;
+    position: static !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .catalogo-descripcion {
+    max-width: 50%;
+  }
+  .catalogo-carousel {
+    max-width: 50%;
+  }
+  .catalogo-item {
+    gap: 8px;
+  }
+  .catalogo-descripcion h3 {
+    font-size: 1.1rem;
+  }
+  .catalogo-descripcion p {
+    font-size: 0.95rem;
+  }
+  .catalogo-carousel img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  .catalogo-item {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+  }
+  .catalogo-carousel,
+  .catalogo-descripcion {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .catalogo-carousel img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+}
+.portada {
+  background-color: #fffbd4; /* Color de fondo */
+  background-size: cover;
+  background-position: center;
+  display: flex; /* Flexbox para alinear elementos */
+  width: 100%; /* Ancho de la portada */
+  max-width: none; /* Ancho máximo de la portada */
+  height: 430px; /* Alto de la portada */
+  margin: 0 auto; /* Centra la portada */
+}
+.portada img {
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  object-fit: cover; /* Ajusta la imagen al contenedor */
+  border-color: #ccded2; /* Color del borde */
+  border-width: 0.5px; /* Ancho del borde */
+  border-style: solid; /* Estilo del borde */
+}
+.portada img:hover {
+  transform: scale(1.05); /* Escala la imagen al pasar el mouse */
+  transition: transform 0.1s ease; /* Transición suave */
+}
+
+.portada_mobile img {
+  display: none; /* Oculta las imágenes por defecto */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.main_opcionesdepago_img {
+  width: 100%;
+  max-width: 180px; /* Ajusta el tamaño máximo que prefieras */
+  height: 120px; /* Altura fija para todas */
+  object-fit: cover; /* Recorta la imagen para que no se deforme */
+  margin: 0 auto 10px auto;
+  display: block;
+  border-radius: 12px; /* Opcional: bordes redondeados */
+}
+.main_opcionesdepago_img h5 {
+  text-align: center; /* Centra el texto */
+}
+.main_opcionesdepago_img p {
+  text-align: center; /* Centra el texto */
+  padding: auto; /* Padding automático */
+}
+
+#carouselExample {
+  display: none; /* Oculta el carrusel por defecto */
+}
+
+/*---------quienessomos--------*/
+.main_quienessomos {
+  color: #a18093; /* Color de texto */
+  width: 100%;
+  display: flex; /* Flexbox para alinear elementos */
+  padding: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.footer {
+  background-color: #f5ddbb; /* Color de fondo */
+  padding: 30px; /* Padding */
+  flex-shrink: 0;
+}
+.footer .footer_flex {
+  display: flex;
+  justify-content: space-around; /* Espacio entre los elementos */
+  align-items: flex-start;
+  gap: 8px;
+}
+.footer .footer_contacto, .footer .footer_redes {
+  flex: 1 1 0; /* Cada sección ocupa la misma fracción del espacio */
+  padding: 10px;
+}
+.footer .footer_instagram_iglogo {
+  width: 100px; /* Ajusta el ancho de la imagen */
+  height: 100px; /* Ajusta la altura de la imagen */
+  border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
+  object-fit: cover; /* Asegura que la imagen se recorte correctamente dentro del círculo */
+  margin: 20px auto; /* Centra la imagen horizontalmente y añade un margen superior */
+  display: block; /* Hace que la imagen sea un bloque para centrarla */
+  border: 2px solid #e3b8b2; /* Borde de 2px con color */
+}
+
+.catalogo-main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  background-color: #fffbd4;
+}
+
+.catalogo-titulo {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 2.5rem;
+  color: #a18093;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-shadow: 6px 6px 9px #e3b8b2;
+  font-style: italic;
+  overflow: hidden;
+  animation: slideInOut 3s linear 1;
+}
+
+@keyframes slideInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+.catalogo-ropa {
+  background: #fffbd4;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  min-height: 100vh;
+  padding: 30px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.catalogo-ropa .catalogo-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  flex: 0 1 70%;
+  max-width: 70%;
+  margin-right: 5%;
+  margin-left: 10%;
+}
+.catalogo-ropa .catalogo-aside {
+  flex: 0 1 30%;
+  max-width: 30%;
+  background: #fff;
+  border: 2px solid #ccded2;
+  border-radius: 12px;
+  padding: 24px 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 40px;
+  margin-left: 5%;
+  margin-right: 10%;
+}
+.catalogo-ropa .catalogo-aside h2 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #a18093;
+  text-shadow: 6px 6px 9px #e3b8b2;
+  font-weight: bold;
+}
+.catalogo-ropa .catalogo-aside p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+.catalogo-ropa .catalogo-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+.catalogo-ropa .catalogo-descripcion {
+  flex: 1 1 50%;
+  min-width: 0;
+  width: 280px;
+  height: 280px;
+  border: 2px solid #ccded2;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  margin-right: 0;
+}
+@media (max-width: 600px) {
+  .catalogo-ropa .catalogo-descripcion {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+.catalogo-ropa .catalogo-carousel {
+  flex: 1 1 50%;
+  min-width: 0;
+  width: 280px;
+  height: 280px;
+  border: 2px solid #ccded2;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-left: 0;
+}
+.catalogo-ropa .catalogo-carousel .carousel-control-prev-icon,
+.catalogo-ropa .catalogo-carousel .carousel-control-next-icon {
+  filter: invert(1) grayscale(1) brightness(0.2);
+}
+@media (max-width: 600px) {
+  .catalogo-ropa .catalogo-carousel {
+    margin-left: 0;
+  }
+}
+.catalogo-ropa .catalogo-carousel .carousel-inner,
+.catalogo-ropa .catalogo-carousel .carousel-item,
+.catalogo-ropa .catalogo-carousel img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.catalogo-ropa .catalogo-colores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.catalogo-ropa .color-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid #888;
+  cursor: pointer;
+  outline: none;
+  background: #eee;
+  transition: border 0.2s;
+}
+.catalogo-ropa .color-btn:hover {
+  border: 2px solid #e3b8b2;
+}
 
 /*# sourceMappingURL=estilos.css.map */

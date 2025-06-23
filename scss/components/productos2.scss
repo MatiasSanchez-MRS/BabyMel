@@ -98,16 +98,17 @@
 
   .catalogo-item {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
     margin-bottom: 16px;
-    @media (max-width: 600px) {
-      flex-direction: column;
-      gap: 10px;
-    }
+    width: 100%;
+
   }
 
   .catalogo-descripcion {
+    flex: 1 1 50%;
+    min-width: 0;
     width: 280px;
     height: 280px;
     border: 2px solid $color-terciario;
@@ -127,6 +128,8 @@
   }
 
   .catalogo-carousel {
+    flex: 1 1 50%;
+    min-width: 0;
     width: 280px;
     height: 280px;
     border: 2px solid $color-terciario;

@@ -1,5 +1,33 @@
+/*index-----------------------------------*/
+  
+  @media (min-width: 900px) {
+    .header {
+    flex-direction: row;
+    justify-content: center;
+    h1 {
+
+      font-size: 3rem;
+    }
+    .img-logo {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .portada {
+    display: none !important;
+  }
+  .portada_mobile img {
+    display: block !important;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
 /*productos2-----------------------------------*/
-/*productos2-----------------------------------*/
+
 .catalogo-ropa{
   display: flex;
   align-items: flex-start;
@@ -8,8 +36,10 @@
   @media (max-width: 900px) {
     flex-direction: column;
     .catalogo-lista, .catalogo-aside {
-      max-width: 100%;
-      width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 3px !important;
+    padding: 3px !important;
     }
     .catalogo-lista {
       // Ocupa todo el ancho cuando el aside pasa abajo
@@ -17,8 +47,51 @@
     }
     .catalogo-aside {
       margin-top: 24px;
-      height: auto;
-      position: static;
+      height: auto !important;
+      position: static !important;
     }
+  }
+}
+
+@media (max-width: 800px) {
+  .catalogo-descripcion{
+    max-width: 50%;
+    
+  }
+  .catalogo-carousel{
+    max-width: 50%;
+   
+  }
+    .catalogo-item {
+    gap: 8px;
+  }
+  .catalogo-descripcion h3 {
+    font-size: 1.1rem;
+  }
+  .catalogo-descripcion p {
+    font-size: 0.95rem;
+  }
+  .catalogo-carousel img {
+    max-width: 100%;
+    height: auto;
+  }
+  }
+@media (max-width: 600px) {
+  .catalogo-item {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+  }
+  .catalogo-carousel,
+  .catalogo-descripcion {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .catalogo-carousel img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
   }
 }
