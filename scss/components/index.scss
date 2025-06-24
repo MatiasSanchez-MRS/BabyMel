@@ -52,7 +52,11 @@
 
 /*---------quienessomos--------*/
 .main_quienessomos{
-    color: $color-quintario; /* Color de texto */
+    h2{
+    color: $color-quintario;
+    text-shadow:  6px 6px 9px $color-cuaternario;
+    font-weight: bold;
+    }
     width: 100%;
     display: flex; /* Flexbox para alinear elementos */
     padding: 15px; 

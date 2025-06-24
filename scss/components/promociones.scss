@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $color-principal; /* color de fondo */
+}
+main {
+    background-color: $color-principal;
+    font-family: $fuente-principal;
+    h2 {
+    color: $color-quintario;
+    text-shadow:  6px 6px 9px $color-cuaternario;
+    font-weight: bold;
+    }
+    h3 {
+    color: $color-quintario;
+    text-shadow:  6px 6px 9px $color-cuaternario;
+    font-weight: bold;
+    }
+}

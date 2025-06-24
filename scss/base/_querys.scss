@@ -25,6 +25,20 @@
   }
 }
 
+/*hacete revendedor-----------------------------------*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .main.container {
+    margin: 10px auto;
+   
+    padding: 32px 16px; // Espacio interno arriba/abajo y a los costados
+    gap: 24px; // Si usas display: flex en el main
+  }
+  .main.container > * {
+    margin-bottom: 24px; // Espacio entre los hijos del main
+  }
+}
+
 
 /*productos2-----------------------------------*/
 
@@ -95,3 +109,4 @@
     max-width: 100% !important;
   }
 }
+

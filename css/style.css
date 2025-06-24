@@ -24,7 +24,7 @@
   text-shadow: 6px 6px 9px #e3b8b2;
 }
 .header h1::first-letter {
-  font-size: 77px;
+  font-size: 57px;
   font-weight: bold; /* negrita */
   text-shadow: 6px 6px 9px #e3b8b2;
 }
@@ -81,6 +81,17 @@
     display: block !important;
     width: 100%;
     height: auto;
+  }
+}
+/*hacete revendedor-----------------------------------*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .main.container {
+    margin: 10px auto;
+    padding: 32px 16px;
+    gap: 24px;
+  }
+  .main.container > * {
+    margin-bottom: 24px;
   }
 }
 /*productos2-----------------------------------*/
@@ -202,11 +213,15 @@
 
 /*---------quienessomos--------*/
 .main_quienessomos {
-  color: #a18093; /* Color de texto */
   width: 100%;
   display: flex; /* Flexbox para alinear elementos */
   padding: 15px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.main_quienessomos h2 {
+  color: #a18093;
+  text-shadow: 6px 6px 9px #e3b8b2;
+  font-weight: bold;
 }
 
 .footer {
@@ -404,6 +419,50 @@
 }
 .catalogo-ropa .color-btn:hover {
   border: 2px solid #e3b8b2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffbd4; /* color de fondo */
+}
+
+main {
+  background-color: #fffbd4;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+main h2 {
+  color: #a18093;
+  text-shadow: 6px 6px 9px #e3b8b2;
+  font-weight: bold;
+}
+main h3 {
+  color: #a18093;
+  text-shadow: 6px 6px 9px #e3b8b2;
+  font-weight: bold;
+}
+
+.body {
+  background-color: #fffbd4;
+  margin: 0;
+  padding: 0;
+  margin-right: 0%;
+}
+
+/* {
+  outline: 1px solid red;
+}*/
+body.gracias {
+  background-color: #fffbd4 !important; /* color de fondo */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.logo-gracias {
+  width: 100px; /* Ajusta el ancho de la imagen */
+  height: 100px; /* Ajusta la altura de la imagen */
+  border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
+  object-fit: cover; /* Asegura que la imagen se recorte correctamente dentro del círculo */
+  border: 2px solid #e3b8b2; /* Borde de 2px con color */
 }
 
 /*# sourceMappingURL=style.css.map */

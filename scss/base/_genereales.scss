@@ -23,7 +23,7 @@
         text-align: center;/* centrado */
         text-shadow:  6px 6px 9px $color-cuaternario;
         &::first-letter{
-                font-size: 77px;
+                font-size: 57px;
                 font-weight: bold;/* negrita */
                 text-shadow: 6px 6px 9px $color-cuaternario;
         }
@@ -44,7 +44,6 @@
         height: 100px; /* Ajusta la altura de la imagen */
         border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
         object-fit: cover; /* Asegura que la imagen se recorte correctamente dentro del círculo */
-
         border: 2px solid #e3b8b2; /* Borde de 2px con color */
        }
     }
@@ -64,3 +63,4 @@
         background-color: $color-principal;
         flex: 1 0 auto;
 }
+
