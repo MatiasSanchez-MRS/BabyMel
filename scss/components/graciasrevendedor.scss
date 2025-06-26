@@ -4,10 +4,6 @@ body.gracias {
 }
 
 .logo-gracias {
-        width: 100px; /* Ajusta el ancho de la imagen */
-        height: 100px; /* Ajusta la altura de la imagen */
-        border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
-        object-fit: cover; /* Asegura que la imagen se recorte correctamente dentro del círculo */
-        border: 2px solid #e3b8b2; /* Borde de 2px con color */
+  @include imagen-circular(100px, 100px, 2px solid #e3b8b2);
 }
 
